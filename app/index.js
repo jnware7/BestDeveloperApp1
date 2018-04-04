@@ -8,21 +8,9 @@ require('./index.css');
 //lifecycle event
 //UI
 
-class App extends React.Component {
-  render() {
-    return(
-      <div>
-        <h1>{this.props.greeting}</h1>
-      </div>
-    )
-  }
-}
-
-App.propTypes = {
-  greeting: PropTypes.string.isRequired
-}
+var App = require('./components/App');
 
 ReactDOM.render(
-  <App greeting='Hello world!' />,
+  <App />,
   document.getElementById('app')
 );
