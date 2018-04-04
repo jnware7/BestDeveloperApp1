@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
+var PropTypes = require('prop-types');
 require('./index.css');
 
 //state
@@ -11,13 +12,17 @@ class App extends React.Component {
   render() {
     return(
       <div>
-        Hello World!
+        <h1>{this.props.greeting}</h1>
       </div>
     )
   }
 }
 
+App.propTypes = {
+  greeting: PropTypes.string.isRequired
+}
+
 ReactDOM.render(
-  <App />,
+  <App greeting='Hello world!' />,
   document.getElementById('app')
 );
