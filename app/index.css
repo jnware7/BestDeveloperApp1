@@ -1,9 +1,11 @@
 body{
  font-family: 'Open Sans', sans-serif;
+ font-weight: 100;
 }
 ul{
  padding:0px;
 }
+
 li{
   list-style: none;
 }
@@ -11,7 +13,13 @@ li{
   max-width: 1200px;
   margin: 0 auto;
 }
-
+.loading{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  color:blue;
+}
 .languages{
   display:flex;
   justify-content: center;
@@ -19,7 +27,7 @@ li{
 }
 .languages li{
  margin: 10px;
- font-weight: bold;
+ font-weight: 100;
  cursor:pointer;
 }
 
@@ -41,4 +49,23 @@ li{
 .avatar {
   width: 150px;
   border-radius: 50%;
+}
+.nav {
+  display: flex;
+  margin: 10px;
+  cursor:pointer;
+}
+
+.active{
+  font-weight: bold;
+}
+
+.nav li{
+  font-weight:100;
+  margin-right: 15px;
+}
+.nav a{
+  text-decoration: none;
+  color:blue;
+  font-size: 1.2rem;
 }
