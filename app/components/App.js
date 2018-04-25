@@ -1,30 +1,34 @@
-var React = require('react');
-var ReactRouter = require('react-router-dom');
-var Router = ReactRouter.BrowserRouter;
-var Route = ReactRouter.Route;
-var Switch = ReactRouter.Switch;
-var Nav = require('./Nav');
+const React = require('react');
 
-var Popular = require('./Popular');
+const ReactRouter = require('react-router-dom');
+
+const Router = ReactRouter.BrowserRouter;
+
+const { Route, Switch } = ReactRouter;
+const Nav = require('./Nav');
+
+const Popular = require('./Popular');
 
 class App extends React.Component {
   render() {
     return (
       <Router>
-        <div className='container'>
+        <div className="container">
           <Nav />
 
           <Switch>
 
-            <Route path='/popular' component={Popular} />
-            <Route render={function () {
-              return <p className='loading'>Not Found</p>
-            }} />
+            <Route path="/popular" component={Popular} />
+            <Route render={
+              () => <p className="loading">Not Found</p>
+            }
+            />
           </Switch>
         </div>
       </Router>
-    )
+    );
   }
+
 }
 
 module.exports = App;
