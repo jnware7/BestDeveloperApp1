@@ -8,6 +8,7 @@ const { Route, Switch } = ReactRouter;
 const Nav = require('./Nav');
 
 const Popular = require('./Popular');
+const Battle = require('./Battle');
 
 class App extends React.Component {
   render() {
@@ -19,6 +20,7 @@ class App extends React.Component {
           <Switch>
 
             <Route path="/popular" component={Popular} />
+            <Route path="/battle" component={Battle} />
             <Route render={
               () => <p className="loading">Not Found</p>
             }
